@@ -1,3 +1,4 @@
+package model.entities;
 public class Discount {
 
 	private float discountProf;

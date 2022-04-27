@@ -6,15 +6,17 @@ public class Discount {
 	private float discountStud;
 
 	public void Discount(float discountStud, float discountProf) {
+		this.discountStud = discountStud;
+		this.discountProf= discountProf;
 
 	}
 
 	public float getProfDiscount() {
-		return 0;
+		return discountProf;
 	}
 
 	public float getStudDiscount() {
-		return 0;
+		return discountStud;
 	}
 
 }

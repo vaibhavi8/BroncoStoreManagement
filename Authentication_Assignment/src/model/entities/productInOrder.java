@@ -1,3 +1,4 @@
+package model.entities;
 public class productInOrder {
 
 	private int quantity;

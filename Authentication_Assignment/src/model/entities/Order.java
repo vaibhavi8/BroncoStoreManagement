@@ -1,10 +1,16 @@
+package model.entities;
+
+import java.sql.Date;
+import java.sql.Time;
+import java.util.*;
+
 public class Order {
 
 	private int orderID;
 
 	private Date date;
 
-	private time Time;
+	private Time time;
 
 	private Customer customerName;
 
@@ -16,7 +22,7 @@ public class Order {
 
 	private float fina_price;
 
-	public void Order(Date date, time Time, Customer customerName, String orderType) {
+	public void Order(Date date, Time time, Customer customerName, String orderType) {
 
 	}
 

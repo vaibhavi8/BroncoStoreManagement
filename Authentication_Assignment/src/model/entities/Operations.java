@@ -1,3 +1,4 @@
+package model.entities;
 public interface Operations {
 
 	public abstract void add();

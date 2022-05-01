@@ -120,3 +120,4 @@ public class LoginView extends JFrame implements ActionListener {
 	}
 	
 }
+

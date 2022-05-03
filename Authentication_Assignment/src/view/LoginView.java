@@ -26,8 +26,7 @@ public class LoginView extends JFrame implements ActionListener {
 
 	private JPanel panel1, panel2, panel3;
 	
-	public LoginView() {
-
+	public LoginView() {     
 		this.initializeComponents();
 
 		this.buildUI();

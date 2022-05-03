@@ -11,7 +11,29 @@ public class Customer{
 		this.broncoID = broncoID;
 		this.name = name;
 		this.address = address;
-		this.profCustomerType = profCustomerType;;
+		this.profCustomerType = profCustomerType;
+	}
+	
+	public void addOrder(int orderID) {
+		
+	}
+	
+	public boolean isProf() {
+		if (profCustomerType == true) {
+			return true;
+		}
+		return false;
+	}
+	
+	public void deleteCustomer(int broncoID) {
+		this.broncoID = -1;
+		this.name = null;
+		this.address = null;
+		this.profCustomerType = true;
+	}
+	
+	public void searchCustomer(int broncoID) {
+		
 	}
 	
 	

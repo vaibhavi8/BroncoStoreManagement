@@ -23,9 +23,7 @@ public class CustomerMenuView extends JFrame implements ActionListener {
 	private JButton buttonSearch, buttonAStudent, buttonAProfessor;
 	private JFrame frame;
 
-	//private JTextField txtUserName, txtPassword;
-
-	private JPanel panel1, panel2, panel3;
+	private JPanel panel1, panel2;
 	
 	public CustomerMenuView() {
 
@@ -35,11 +33,6 @@ public class CustomerMenuView extends JFrame implements ActionListener {
 	}
 
 	private void initializeComponents() {
-		
-//		this.lblUserName = new JLabel("Username:   ");
-//		this.lblPassword = new JLabel("Password:   ");
-		
-
 		
 
 		this.buttonSearch = new JButton("Search");
@@ -51,14 +44,8 @@ public class CustomerMenuView extends JFrame implements ActionListener {
 		this.buttonAProfessor = new JButton("Add Professor");
 		this.buttonAProfessor.addActionListener(this);
 
-//		this.txtUserName = new JTextField(23);
-//		this.txtPassword = new JTextField(23);
-
 		this.panel1 = new JPanel();
 		this.panel1.setLayout(new FlowLayout(FlowLayout.CENTER));
-
-		this.panel2 = new JPanel();
-		this.panel2.setLayout(new FlowLayout(FlowLayout.CENTER));
 
 		this.panel2 = new JPanel();
 		this.panel2.setLayout(new FlowLayout(FlowLayout.CENTER));
@@ -100,19 +87,6 @@ public class CustomerMenuView extends JFrame implements ActionListener {
 			new AddProfView();
 		}
 	 
-//		else if(event.getSource() == this.buttonAStudent) {
-//			try {
-//				new AddStudentView();
-//			} catch (MessageException e) {
-//					JOptionPane.showMessageDialog (null, e.getMessage());
-//				} catch (ClassNotFoundException e) {
-//					JOptionPane.showMessageDialog (null, e.getMessage());
-//				} catch (SQLException e) {
-//					JOptionPane.showMessageDialog (null, e.getMessage());
-//				}
-//		}
-//		else if(evet)
-//			
 	}
 	
 }

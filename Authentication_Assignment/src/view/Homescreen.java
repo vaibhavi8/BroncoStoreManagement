@@ -104,19 +104,16 @@ public class Homescreen extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent event) {
-		if (event.getSource() == this.buttonSubmit) {
-			try {
+		if (event.getSource() == this.buttonCustomerMenu) {
+			new CustomerMenuView();
+		} 
+		if (event.getSource() == this.buttonOrderMenu) {
+			new OrderMenuView();
+		} 
+		if (event.getSource() == this.buttonProductMenu) {
+			new ProductMenuView();
+		} 
 		
-				
-				
-				
-			} 
-			catch(Exception e) {
-				JOptionPane.showMessageDialog (null, e.getMessage());
-			} 
-		} else {
-			
-		}
 	}
 	
 	

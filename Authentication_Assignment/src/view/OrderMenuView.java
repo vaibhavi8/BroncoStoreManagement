@@ -11,16 +11,16 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-public class ProductMenu  extends JFrame implements ActionListener
+public class OrderMenuView extends JFrame implements ActionListener
 {
-	private JLabel lblProductMenu;
+private JLabel lblProductMenu;
 	
 	private JButton buttonSearch, buttonAdd;
 
 	//private JTextField txtUserName, txtPassword;
 
 	private JPanel panel1, panel2;
-	public ProductMenu() {
+	public OrderMenuView() {
 
 		this.initializeComponents();
 
@@ -70,7 +70,7 @@ public class ProductMenu  extends JFrame implements ActionListener
 		//this.getContentPane().add(panel3, BorderLayout.CENTER);
 		//this.getContentPane().add(panel4, BorderLayout.SOUTH);
 
-		this.setTitle("Product Menu");
+		this.setTitle("Order Menu");
 		this.setBounds(365, 200, 365, 200);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
@@ -78,7 +78,7 @@ public class ProductMenu  extends JFrame implements ActionListener
 	}
 
 	public static void main(String[] args) {
-		new ProductMenu();
+		new OrderMenuView();
 	}
 
 
@@ -98,4 +98,5 @@ public class ProductMenu  extends JFrame implements ActionListener
 			
 		}
 	}
+
 }

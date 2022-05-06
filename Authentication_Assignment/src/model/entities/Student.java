@@ -8,7 +8,7 @@ public class Student extends Customer{
 	private String minor;
 	private float discount;
 	
-	public Student(Date enterDate, Date gradDate, String major, String minor, float discount, int broncoID, String name, Address address, boolean profCustomerType) {
+	public Student (Date enterDate, Date gradDate, String major, String minor, float discount, int broncoID, String name, Address address, boolean profCustomerType) {
 		super(broncoID, name, address, profCustomerType);
 		this.enterDate = enterDate;
 		this.gradDate = gradDate;

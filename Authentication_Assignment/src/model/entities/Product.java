@@ -9,12 +9,16 @@ public class Product {
 	private Date dateUpdated;
 	private HashMap priceDate_map;
 
-	public void Product(int productID, String productName) 
+	public Product(int productID, String productName) 
 	{
 		this.productID = productID;
 		this.productName = productName;
 	}
-
+	public String getProductName ()
+	{
+		return productName;
+	}
+	
 	public int getProductId() 
 	{
 		return productID;

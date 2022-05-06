@@ -1,6 +1,7 @@
 package model.entities;
 
-public class Professor extends Customer{
+public class Professor extends Customer
+{
 	private String department;
 	private String research;
 	private int discount;

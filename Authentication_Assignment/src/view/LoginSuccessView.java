@@ -15,7 +15,8 @@ public class LoginSuccessView {
 	private JPanel panel1;
 	
 	public LoginSuccessView (String userName) {
-		JFrame frame = new JFrame();
+		frame.setSize(1000, 600);
+		//JFrame frame = new JFrame();
 		this.lblUserName = new JLabel("Welcome " + userName + "!");
 		this.panel1 = new JPanel();
 		this.lblUserName.setFont(new Font("Arial",Font.PLAIN,25));

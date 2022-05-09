@@ -13,38 +13,33 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-public class OrderDisplayView {
+import model.entities.Order;
+
+public class OrderDisplayView extends JFrame {
 
 	JFrame frame;
 	JPanel chart;
-	JButton backButton;
-	JButton menuButton;
-	JButton updateButton;
-	JButton deleteButton;
+	JButton backButton, menuButton, updateButton, deleteButton;
+
 	
 	
-	JLabel lblOrderID = new JLabel("Order ID: ");
+	JLabel lblOrderID, lblCustomer, lblDateTime, label1, label2, label3;
 	
-	JLabel lblCustomer = new JLabel("Customer: ");
-	JLabel lblDateTime = new JLabel("Date/Time: ");
-	
-	
-	
-	JLabel label1 = new JLabel("Product(s)");
-	JLabel label2 = new JLabel("Qt");
-	JLabel label3 = new JLabel("Price");
+	this.setSize(1000, 600);
+	this.label1 = new JLabel("Product(s): ");
+	this.label2 = new JLabel("Qt: ");
+	this.label3 = new JLabel("Price: ");
 	
 	JLabel totalPrice = new JLabel("Total Price: ");
 //	JLabel label4 = new JLabel("$50");
 //	JLabel label5 = new JLabel("$60");
 //	JLabel label6 = new JLabel("$70");
 	
-	public OrderDisplayView()
+	public OrderDisplayView(Order order)
 	{
-		frame = new JFrame();
-		frame.setSize(1000, 1000);
-		chart = new JPanel();
-		chart.setLayout(new GridBagLayout());
+		this.setSize(1000, 600);
+		this.chart = new JPanel();
+		this.chart.setLayout(new GridBagLayout());
 		menuButton = new JButton("Menu");
 		backButton = new JButton("Back");
 	    updateButton = new JButton("Update");
@@ -149,6 +144,6 @@ public class OrderDisplayView {
 	
 	public static void main(String[] args)
 	{
-		new OrderDisplayView();
+		new OrderDisplayView(Order order);
 	}
 }

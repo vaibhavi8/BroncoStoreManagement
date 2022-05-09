@@ -8,14 +8,13 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class ProductMenuView  extends JFrame implements ActionListener
 {
 	private JLabel lblProductMenu;
 	
-	private JButton buttonSearch, buttonAdd;
+	private JButton buttonSearch, buttonAdd, buttonHome;
 
 	//private JTextField txtUserName, txtPassword;
 
@@ -28,7 +27,7 @@ public class ProductMenuView  extends JFrame implements ActionListener
 	}
 
 	private void initializeComponents() {
-		
+		this.setSize(1000, 600);
 		//this.lblProductMenu = new JLabel("Product Menu");
 		//this.lblPassword = new JLabel("Password:   ");
 
@@ -37,8 +36,10 @@ public class ProductMenuView  extends JFrame implements ActionListener
 
 		this.buttonAdd = new JButton("Add");
 		this.buttonAdd.addActionListener(this);
-		
-	
+
+
+		this.buttonHome = new JButton("HOME");		
+		this.buttonHome.addActionListener(this);
 		
 		//this.buttonClean = new JButton("Clean");
 		//this.buttonClean.addActionListener(this);
@@ -46,11 +47,12 @@ public class ProductMenuView  extends JFrame implements ActionListener
 		//this.txtUserName = new JTextField(23);
 		//this.txtPassword = new JTextField(23);
 
-		this.panel1 = new JPanel();
-		this.panel1.setLayout(new FlowLayout(FlowLayout.CENTER));
-
+	
 		this.panel2 = new JPanel();
 		this.panel2.setLayout(new FlowLayout(FlowLayout.CENTER));
+
+		this.panel1 = new JPanel();
+		this.panel1.setLayout(new FlowLayout(FlowLayout.RIGHT));
 
 	
 
@@ -63,15 +65,16 @@ public class ProductMenuView  extends JFrame implements ActionListener
 		this.panel2.add(this.buttonSearch);
 		this.panel2.add(this.buttonAdd);
 
-		
+		this.panel1.add(this.buttonHome);
 
-		this.getContentPane().add(panel1, BorderLayout.NORTH);
+	
 		this.getContentPane().add(panel2, BorderLayout.CENTER);
+		this.getContentPane().add(panel1, BorderLayout.SOUTH);
 		//this.getContentPane().add(panel3, BorderLayout.CENTER);
 		//this.getContentPane().add(panel4, BorderLayout.SOUTH);
 
 		this.setTitle("Product Menu");
-		this.setBounds(365, 200, 365, 200);
+		//this.setBounds(350, 140, 500, 500);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 		this.setVisible(true);
@@ -85,17 +88,16 @@ public class ProductMenuView  extends JFrame implements ActionListener
 	@Override
 	public void actionPerformed(ActionEvent event) {
 		if (event.getSource() == this.buttonSearch) {
-			try {
-		
-				
-				
-				
-			} 
-			catch(Exception e) {
-				JOptionPane.showMessageDialog (null, e.getMessage());
-			} 
-		} else {
-			
+			dispose();
+			new SearchProductView();
+		}
+		if (event.getSource() == this.buttonAdd){
+			dispose();
+			new AddProductView();
+		}
+		if (event.getSource() == this.buttonHome){
+			dispose();
+			new Homescreen();
 		}
 	}
 }

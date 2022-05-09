@@ -1,21 +1,16 @@
 package model.entities;
 public class Discount {
 
-	private float discountProf;
+	private static float discountProf = (float) 0.05;
+	private static float discountStud = (float)0.12;
 
-	private float discountStud;
 
-	public void Discount(float discountStud, float discountProf) {
-		this.discountStud = discountStud;
-		this.discountProf= discountProf;
 
-	}
-
-	public float getProfDiscount() {
+	public static float getProfDiscount() {
 		return discountProf;
 	}
 
-	public float getStudDiscount() {
+	public static float getStudDiscount() {
 		return discountStud;
 	}
 

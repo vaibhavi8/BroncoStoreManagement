@@ -25,7 +25,7 @@ public class MenuReportView {
 	public MenuReportView(){
 		
 		frame = new JFrame();
-		frame.setSize(1000, 1000);
+		frame.setSize(1000, 600);
 		chart = new JPanel();
 		chart.setLayout(new GridBagLayout());
 		homeScreenButton = new JButton("Home Screen");

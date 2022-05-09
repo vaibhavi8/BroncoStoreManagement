@@ -1,18 +1,9 @@
 package view;
 
-import java.awt.BorderLayout;
-import java.awt.ComponentOrientation;
-import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.GridLayout;
-import java.awt.Image;
 import java.awt.Insets;
-import java.awt.TextArea;
-import java.awt.Toolkit;
 
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -35,7 +26,7 @@ public class HistoricalPriceView {
 	public HistoricalPriceView()
 	{
 		frame = new JFrame();
-		frame.setSize(1000, 1000);
+		frame.setSize(1000, 600);
 		chart = new JPanel();
 		chart.setLayout(new GridBagLayout());
 		homeScreenButton = new JButton("Home Screen");
@@ -44,13 +35,8 @@ public class HistoricalPriceView {
 		
 		GridBagConstraints c = new GridBagConstraints();
 		
-		
-		
 		//Image
 		   
-		
-		
-		
 		c.insets =  new Insets(15, 15, 15, 15);
 		
 		

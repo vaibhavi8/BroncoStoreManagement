@@ -10,7 +10,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class OrderReceiptView {
+public class OrderReceiptView extends JFrame{
+	
+	
+	
 	JFrame frame;
 	JPanel chart;
 	JButton menuButton;
@@ -39,82 +42,88 @@ public class OrderReceiptView {
 	
 	public OrderReceiptView()
 	{
-		frame = new JFrame();
-		frame.setSize(1000, 1000);
-		chart = new JPanel();
-		chart.setLayout(new GridBagLayout());
-		menuButton = new JButton("Menu");
-		backButton = new JButton("Back");
+		initializeComponents();
+		buildUI();
 		
 		
-		lblCustomer.setFont(new Font("Serif", Font.BOLD, 20));
-		lblDateTime.setFont(new Font("Serif", Font.BOLD, 20));
+	}
+	private void initializeComponents() {
+//		JFrame frame = new JFrame("Add Student");
 		
-		beforeDiscount.setFont(new Font("Serif", Font.BOLD, 15));
-		applyDiscount.setFont(new Font("Serif", Font.BOLD, 15));
-		afterDiscount.setFont(new Font("Serif", Font.BOLD, 15));
+		this.frame = new JFrame();
+		this.frame.setSize(1000, 600);
+		this.chart = new JPanel();
+		this.chart.setLayout(new GridBagLayout());
+		this.menuButton = new JButton("Menu");
 		
 		
+		this.lblCustomer.setFont(new Font("Serif", Font.BOLD, 20));
+		this.lblDateTime.setFont(new Font("Serif", Font.BOLD, 20));
 		
+		this.beforeDiscount.setFont(new Font("Serif", Font.BOLD, 15));
+		this.applyDiscount.setFont(new Font("Serif", Font.BOLD, 15));
+		this.afterDiscount.setFont(new Font("Serif", Font.BOLD, 15));
+		
+	}	
+	private void buildUI() {
+
 		GridBagConstraints c = new GridBagConstraints();
-		
-		
-		
-		//Image
-		   
-		
 		
 		
 		c.insets =  new Insets(15, 15, 15, 15);
 		
-		
 
-	
 		c.gridx = 1;
 		c.gridy = 0;
-		chart.add(lblCustomer, c);
+		this.chart.add(this.lblCustomer, c);
 		c.gridx = 2;
 		c.gridy = 0;
-		chart.add(lblDateTime, c);
+		this.chart.add(this.lblDateTime, c);
 		c.gridx = 0;
 		c.gridy = 1;
-		chart.add(label1, c);
+		this.chart.add(this.label1, c);
 		c.gridx = 2;
 		c.gridy = 1;
-		chart.add(label2, c);
+		this.chart.add(this.label2, c);
 		c.gridx = 4;
 		c.gridy = 1;
-		chart.add(label3, c);
+		this.chart.add(this.label3, c);
 		
 		c.gridx = 2;
 		c.gridy = 3;
-		chart.add(beforeDiscount, c);
+		this.chart.add(this.beforeDiscount, c);
 		
 		c.gridx = 2;
 		c.gridy = 4;
-		chart.add(applyDiscount, c);
+		this.chart.add(this.applyDiscount, c);
 		
 		c.gridx = 2;
 		c.gridy = 5;
-		chart.add(afterDiscount, c);
+		this.chart.add(this.afterDiscount, c);
 		
 		
 		c.gridx = 5;
 		c.gridy = 6;
-		chart.add(menuButton, c);
+		this.chart.add(this.menuButton, c);
 		
 		
 
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setVisible(true);
-		frame.add(chart);
+		this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.frame.setVisible(true);
+		this.frame.add(this.chart);
 		//		frame.setLocationRelativeTo(null); 
 		
-		
+
+		this.setTitle("Add Student");
+		//this.setBounds(350, 140, 500, 500);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setResizable(false);
+		this.setVisible(true);
 	}
+	
 	
 	public static void main(String[] args)
 	{
-		new OrderAddView();
+		new OrderReceiptView();
 	}
 }

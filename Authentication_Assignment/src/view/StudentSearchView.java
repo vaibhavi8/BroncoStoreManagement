@@ -2,7 +2,6 @@ package view;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
-import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,15 +13,11 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 
-import model.dataccess.LoginDataAccess;
-import model.entities.MessageException;
-import model.entities.User;
-
-import java.util.*;
+import model.dataccess.StudentDataAccess;
+import model.entities.Student;
 @SuppressWarnings("serial")
-public class CustomerSearchView extends JFrame implements ActionListener{
+public class StudentSearchView extends JFrame implements ActionListener{
 	
 	private JLabel lblBroncoID, test;
 	private JPanel info, address, buttons;
@@ -30,9 +25,9 @@ public class CustomerSearchView extends JFrame implements ActionListener{
 
 	
 	
-	private JButton buttonSubmit;
+	private JButton buttonSubmit, buttonBack;
 	
-	public CustomerSearchView() {
+	public StudentSearchView() {
 		
 		this.initializeComponents();
 		this.buildUI();
@@ -40,6 +35,7 @@ public class CustomerSearchView extends JFrame implements ActionListener{
 	}
 	
 	private void initializeComponents() {
+		this.setSize(1000, 600);
 //		JFrame frame = new JFrame("Add Student");
 		
 		this.test = new JLabel("Search customer success!");
@@ -48,8 +44,11 @@ public class CustomerSearchView extends JFrame implements ActionListener{
 	
 		
 		
-		this.buttonSubmit = new JButton("Submit");
+		this.buttonSubmit = new JButton("SUBMIT");
 		this.buttonSubmit.addActionListener(this);
+
+		this.buttonBack = new JButton("BACK");
+		this.buttonBack.addActionListener(this);
 		
 		
 		this.info = new JPanel();
@@ -70,27 +69,53 @@ public class CustomerSearchView extends JFrame implements ActionListener{
 		
 		
 		this.buttons.setLayout(new FlowLayout());
+		this.buttons.add(this.buttonBack);
 		this.buttons.add(this.buttonSubmit);
+
 		
 		this.setLayout(new BorderLayout());
 		add("South", buttons);
 		add("Center", info);
 
-		this.setTitle("Search Customer");
-		this.setBounds(350, 140, 500, 200);
+		this.setTitle("Search Student");
+		//this.setBounds(350, 140, 500, 500);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 		this.setVisible(true);
 	}
 
 	public static void main(String[] args) {
-		new CustomerSearchView();
+		new StudentSearchView();
 	}
 
+	@Override
 	public void actionPerformed(ActionEvent event) {
 		if (event.getSource() == this.buttonSubmit) {
-			new ViewCustomer();
+			int bID = Integer.parseInt(txtBroncoID.getText());
+			Student student = null;
+			try {
+				System.out.println(bID);
+				student = StudentDataAccess.queryStudent(bID);
+				new StudentView(student);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				JOptionPane.showMessageDialog(null, "Bronco ID Doesn't Exist!", "No Bronco ID", JOptionPane.ERROR_MESSAGE);
+			}
 		}
+	
+		if (event.getSource() == this.buttonBack) {
+			new CustomerMenuView();
+		}
+	
+		
+
+	}
+
+	public void search()
+	{
+		
 	}
 
 }

@@ -8,7 +8,6 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 @SuppressWarnings("serial")
@@ -32,7 +31,7 @@ public class Homescreen extends JFrame implements ActionListener {
 	}
 
 	private void initializeComponents() {
-		
+		this.setSize(1000, 600);
 		this.lblWelcome = new JLabel("Welcome!");
 		//this.lblPassword = new JLabel("Password:   ");
 
@@ -50,7 +49,6 @@ public class Homescreen extends JFrame implements ActionListener {
 		
 		this.buttonHistoricalPriceQuery = new JButton("Historical Price Query");
 		this.buttonHistoricalPriceQuery.addActionListener(this);
-		
 		
 		//this.buttonClean = new JButton("Clean");
 		//this.buttonClean.addActionListener(this);
@@ -91,7 +89,7 @@ public class Homescreen extends JFrame implements ActionListener {
 		//this.getContentPane().add(panel4, BorderLayout.SOUTH);
 
 		this.setTitle("BSM Homescreen");
-		this.setBounds(365, 200, 365, 200);
+		//this.setBounds(350, 140, 500, 500);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
 		this.setVisible(true);

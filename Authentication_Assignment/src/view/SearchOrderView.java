@@ -12,7 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class OrderSearchView {
+public class SearchOrderView {
 	
 	private JFrame frame;
 	private JLabel lblOrderID;
@@ -24,7 +24,7 @@ public class OrderSearchView {
 	
 	
 	
-	public OrderSearchView(){
+	public SearchOrderView(){
 	//top level container in java swing
 	this.frame = new JFrame();
 	
@@ -74,7 +74,7 @@ public class OrderSearchView {
 	frame.setLocationRelativeTo(null); 
 	//setVisible(true) is a blocking operation and blocks until dialog is closed
 	frame.getContentPane().add(panel, BorderLayout.CENTER);
-	frame.setSize(1000, 1000);
+	frame.setSize(1000, 600);
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	frame.setVisible(true);
 	
@@ -88,6 +88,6 @@ public class OrderSearchView {
 	
 	public static void main(String args[])
 	{
-		new OrderSearchView();
+		new SearchOrderView();
 	}
 }

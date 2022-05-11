@@ -2,7 +2,6 @@ package view;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -73,7 +72,7 @@ public class HistoricalPriceQueryView {
 	frame.setLocationRelativeTo(null); 
 	//setVisible(true) is a blocking operation and blocks until dialog is closed
 	frame.getContentPane().add(panel, BorderLayout.CENTER);
-	frame.setSize(1000, 1000);
+	frame.setSize(1000, 600);
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	frame.setVisible(true);
 	

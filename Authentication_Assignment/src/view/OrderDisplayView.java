@@ -54,18 +54,8 @@ public class OrderDisplayView extends JFrame {
 		
 		GridBagConstraints c = new GridBagConstraints();
 		
-		
-		
-		
-		
-		
-		
-		
 		//Image
 		   
-		
-		
-		
 		c.insets =  new Insets(15, 15, 15, 15);
 		
 		
@@ -120,7 +110,7 @@ public class OrderDisplayView extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				int response = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete this ordeer", "Confirm", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+				int response = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete this order", "Confirm", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
 				if(response == JOptionPane.CANCEL_OPTION)
 				{
 					System.out.println("User selected Cancel");

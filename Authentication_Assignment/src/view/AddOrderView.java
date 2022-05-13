@@ -182,7 +182,7 @@ public class AddOrderView extends JFrame implements ActionListener {
 		add("Center", productinfo);
 		add("North", info);
 
-		this.setTitle("Add Product");
+		this.setTitle("Add Order");
 		//this.setBounds(350, 140, 500, 500);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);

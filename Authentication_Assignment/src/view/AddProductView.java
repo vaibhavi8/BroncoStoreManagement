@@ -6,7 +6,6 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Date;
-import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -17,7 +16,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import model.dataccess.ProductDataAccess;
+import model.dataccess.CreateProduct;
 @SuppressWarnings("serial")
 public class AddProductView extends JFrame implements ActionListener{
 	
@@ -124,16 +123,13 @@ public class AddProductView extends JFrame implements ActionListener{
 			//new ViewProduct();
 		
 			try {
+				/*
 				ProductDataAccess.createProduct(Integer.parseInt(txtProductID.getText()), txtProductName.getText(),
-				date, txtProductDesc.getText(), Float.parseFloat(txtProductPrice.getText()));
+				date, txtProductDesc.getText(), Float.parseFloat(txtProductPrice.getText()));*/
+				CreateProduct.ProductCreate(Integer.parseInt(txtProductID.getText()), txtProductName.getText(),
+						date, txtProductDesc.getText(), Float.parseFloat(txtProductPrice.getText()));
 
 			} catch (NumberFormatException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (ClassNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}

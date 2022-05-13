@@ -29,7 +29,7 @@ public class StudentView extends JFrame implements ActionListener{
 	
 	private void initializeComponents(Student student) {
 		this.setSize(1000, 600);
-        customerMenuButton = new JButton("Customer Menu");
+        this.customerMenuButton = new JButton("Customer Menu");
 
 		this.test = new JLabel("Add Student View Success!");
 		this.lblName = new JLabel("Full Name");

@@ -6,7 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import model.entities.Customer;
 import model.entities.Student;
 
 public class StudentDataAccess 
@@ -20,7 +19,7 @@ public class StudentDataAccess
 			Class.forName("org.postgresql.Driver");
 	        return DriverManager.getConnection(URL, USER, PWD);
 	    }
-	
+	/*
 	public static void createStudent (String name, int broncoID,
 			String phone_num, 
 			Boolean isProf, String DOB, String enterDate, String gradDate,
@@ -82,6 +81,7 @@ public class StudentDataAccess
 		
 		
 	}
+	*/
 	
 	public static int deleteStudent (int id) throws ClassNotFoundException, SQLException
 	{	

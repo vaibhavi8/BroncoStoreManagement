@@ -72,26 +72,24 @@ public class OrderDataAccess
 			System.out.println(ex.getMessage());
 	    }
 	}
-	public static int deleteOrder (int orderId) throws ClassNotFoundException
+	public static boolean deleteOrder (int orderId) throws ClassNotFoundException
 	{
 		   String deleteOrder = "DELETE FROM orders WHERE order_id = ?";
 		  
-		    int affected_rows = 0;
-		    try {
+		    boolean flag = false;
+		    try 
+		    {
 		        	Connection conn = connect();
 		        	PreparedStatement pstmt1 = conn.prepareStatement(deleteOrder);
 		        	pstmt1.setInt(1, orderId);
-		        	affected_rows = pstmt1.executeUpdate();
-		        	
-		     
-
+		        	pstmt1.executeUpdate();
+		        	flag = true;
 		     } 
 		     catch (SQLException ex)
 		     {
 		            System.out.println(ex.getMessage());
-		            System.out.println("Error from delete Order!");
 		     }
-		     return affected_rows;
+		     return flag;
 			
 	}
 	

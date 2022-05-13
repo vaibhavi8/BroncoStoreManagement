@@ -1,15 +1,32 @@
 package model.entities;
 import java.sql.Date;
-import java.util.HashMap;
-public class Product {
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
+@Table(name="product")
+public class Product {
+	@Id
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="product_id")
 	private int productID;
+	
+	@Column(name="product_name")
 	private String productName;
+	
+	@Column(name="product_price")
 	private float productPrice;
+	
+	@Column(name="prod_description")
 	private String productDesc;
+	
+	@Column(name="date_price_updated")
 	private Date product_date;	
-	private Date dateUpdated;
-	private HashMap priceDate_map;
+	
+	
+	
 
 	public Product(int productID, String productName, Date product_date, String productDesc, float productPrice) //productID
 	{

@@ -59,7 +59,8 @@ public class AddOrderView2 extends JFrame implements ActionListener {
 		yProduct = 1;
 		panel = new JPanel();
 		
-		this.setSize(1000, 1000);
+		this.setSize(500, 500);
+		//this.setBounds(0, 0, 1000, 600);
 		this.lblCustomer = new JLabel("Customer ID: ");
 		this.txtCustomerID = new JFormattedTextField();
 
@@ -114,38 +115,47 @@ public class AddOrderView2 extends JFrame implements ActionListener {
 
 	private void buildUI() throws ClassNotFoundException {
 	
+		c.gridx = 2;
+		c.gridy = 0;
+		this.panel.add(cb, c);
+
+		c.gridx = 5;
+		c.gridy = 0;
+		this.panel.add(buttonAdd, c);
+
 		c.gridx = 0;
-		c.gridy = 0;
+		c.gridy = 1;
 		this.panel.add(lblDateTime, c);
-    	c.gridx = 4;
-		c.gridy = 0;
+		
+    	c.gridx = 5;
+		c.gridy = 1;
 		this.panel.add(lblCustomer, c);
 		c.gridx = 1;
-		c.gridy = 1;
+		c.gridy = 2;
 		this.panel.add(lblProduct, c);
     	c.gridx = 2;
-		c.gridy = 1;
+		c.gridy = 2;
 		this.panel.add(lblQuantity, c);
 		c.gridx = 3;
-		c.gridy = 1;
+		c.gridy = 2;
 		this.panel.add(lblProductPrice, c);
-		c.gridx = 2;
-		c.gridy = 10;
-		this.panel.add(lblPriceBeforeDiscount, c);
-    	c.gridx = 2;
-		c.gridy = 11;
-		this.panel.add(lblApplyDiscount, c);
-		c.gridx = 2;
-		c.gridy = 12;
-		this.panel.add(lblPriceAfterDiscount, c);
-		c.gridx = 1;
-		c.gridy = 13;
-		this.panel.add(buttonBack, c);
 		c.gridx = 3;
-		c.gridy = 13;
+		c.gridy = 5;
+		this.panel.add(lblPriceBeforeDiscount, c);
+    	c.gridx = 3;
+		c.gridy = 6;
+		this.panel.add(lblApplyDiscount, c);
+		c.gridx = 3;
+		c.gridy = 7;
+		this.panel.add(lblPriceAfterDiscount, c);
+		c.gridx = 3;
+		c.gridy = 8;
+		this.panel.add(buttonBack, c);
+		c.gridx = 4;
+		c.gridy = 8;
 		this.panel.add(buttonSubmit, c);
 
-		
+		this.setBounds(0, 0, 1000, 600);		
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setVisible(true);
 		this.add(panel);

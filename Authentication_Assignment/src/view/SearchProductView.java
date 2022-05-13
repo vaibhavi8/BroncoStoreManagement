@@ -86,6 +86,7 @@ public class SearchProductView extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent event) {
 		if (event.getSource() == this.buttonSubmit) {
 			dispose();
+			//fix
 			new ViewProduct();
 		}
 		if (event.getSource() == this.buttonBack) {

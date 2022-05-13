@@ -153,6 +153,9 @@ public class CustomerMenuView extends JFrame implements ActionListener {
 		if (event.getSource() == this.buttonDeleteStudent){
 			new StudentDeleteView();
 		}
+		if (event.getSource() == this.buttonHome){
+			new Homescreen();
+		}
 	 
 	}
 	

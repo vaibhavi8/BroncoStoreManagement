@@ -10,8 +10,6 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-import model.entities.Product;
-
 public class ProductDataAccess {
 
 
@@ -24,6 +22,7 @@ public class ProductDataAccess {
 	        return DriverManager.getConnection(URL, USER, PWD);
 	    }
 	
+	/* MADE THIS WITH HIBERNATE --- HIBERNATE VERSION IS UNDER CREATE PRODUCT
 	public static void createProduct (int productID, String productName, Date product_date, 
 	String productDesc, float productPrice) throws ClassNotFoundException, SQLException 
 	{
@@ -61,6 +60,7 @@ public class ProductDataAccess {
 		
 		
 	}
+	*/
 	public static int deleteProduct (String name, int id) throws ClassNotFoundException
 	{	
 	    String SQL = "DELETE FROM product WHERE product_id = ?";
